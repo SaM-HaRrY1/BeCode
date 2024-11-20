@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dasar JavaScript</title>
+    <!-- <script>
+        function myFunction() {
+            document.getElementById("demo").innerHTML = "Yee berhasil. Ini hasil dari memasukan Javascript pada head html, awas jangan salah. sisapp pak....";
+        }
+    </script> -->
+</head>
+
+<body>
+    <!-- Hello js -->
+    <!-- <h2>JavaScript disimpan di body</h2>
+    <p id="demo"></p>
+    <script>
+        document.getElementById("demo").innerHTML = "Selamat Datang, Hallo World! Saya belajar JavaScript"
+    </script>
+    <br> -->
+
+    <!-- Mengganti style html element -->
+    <!-- <h2>Apa yang bisa dilakukan JavaScript?</h2>
+    <p id="demo">Javasctipt bisa mengganti style dari HTML element ukuran font.</p>
+    <button type="button" onclick="document.getElementById('demo').style.fontSize = '35px'">
+        Klik Disini
+    </button>
+    <br><br> -->
+
+    <!-- Paragraf js -->
+    <!-- <h2>paragrafnya harus berubah, klik dulu buttonnya</h2>
+    <p id="demo">nyobain javascript yang disimpan di head</p>
+    <button type="button" onclick="myFunction()">Coba klik
+    </button>
+    <br><br> -->
+
+    <!-- penggunaan API location -->
+    <!-- <h2>JavaScript menggunakan Geolocation</h2>
+    <p>Klik disini untuk menampilkan koordinatnya.</p>
+    <button onclick="getLocation()">Klik disini</button>
+
+    <p id="demo"></p>
+    <script>
+        const x = document.getElementById("demo");
+        function getLocation() {
+            try {
+                navigator.geolocation.getCurrentPosition(showPosition);
+            } catch {
+                x.innerHTML = err;
+            }
+        }
+        function showPosition(position) {
+            x.innerHTML =
+                "Latitude: " +
+                position.coords.latitude +
+                "<br>Longitude: " +
+                position.coords.longitude;
+        }
+    </script> -->
+
+    <!-- eksternal javascript -->
+    <!-- <h2>nyobain bikin eksternal javascript</h2>
+    <p id="demo">Ini paragraf bukan dari file ksternal</p>
+    <button type="button" onclick="myFunction()">Klik disini</button>
+    <p>Ini contoh link diambil dari "style.js"</p>
+    <script src="style.js"></script> -->
+
+    <!-- membuat variable javascript -->
+    <h2>Membuat Variable</h2>
+    <p>ini adalah sebuah variable didalam JavaScript</p>
+    <p>JavaScript dapat melakukan apa saja yang anda perintahkan</p>
+    <p id="variable"></p>
+    <script>
+        x = 10;
+        y = 12;
+        z = x * y;
+        document.getElementById("variable").innerHTML = "isinya adalah = " + z;
+    </script>
+
+    <!-- membuat let pada javascript -->
+    <!-- Membuat Let Pada JavaScript -->
+    <h2>Ini Contoh Let</h2>
+    <p id="let"></p>
+    <script>
+        let x = 20;
+        {
+            let x = 2;
+        }
+        document.getElementById("let").innerHTML = x;
+    </script>
+
+
+
+
+
+
+    <!-- Menampilkan waktu menggunakan JavaScript -->
+    <!-- <button type="button" onclick="document.getElementById('waktu').innerHTML = Date()">
+        "Klik Disini untuk menampilkan Waktu.
+    </button>
+    <p id="waktu"></p> -->
+</body>
+
+</html>

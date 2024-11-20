@@ -1,0 +1,145 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Times New Roman', sans-serif;
+    background-color: #1A1A3D; 
+    color: white;
+}
+
+.sidebar {
+    background-color: #151961; 
+    width: 250px;
+    height: 100vh;
+    padding: 20px;
+    position: fixed;
+}
+
+.logo img {
+    max-width: 50%;
+    margin-bottom: 30px;
+    width: 100%;
+    height: auto;
+}
+
+.menu {
+    list-style: none;
+}
+
+.menu li {
+    margin-bottom: 20px; 
+    }
+.menu div.beranda {
+    display:flex; 
+    margin-bottom: 20px;
+    background-color: #4D4DA6;
+    color: white;
+    padding: 5px 5px; 
+    border: none;
+    border-radius: 20px;
+    margin-right: 5px;
+    cursor: auto; 
+
+}
+    
+.menu .beranda img.icon {
+    width: 20px; 
+    height: auto;
+     margin-right: 10px; 
+}
+    
+
+.menu a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+}
+
+.menu a:hover {
+    text-decoration: underline;
+}
+
+.menu .submenu {
+    margin-left: 30px;
+    margin-top: 10px;
+    list-style-type: none;
+}
+
+.icon {
+    width: 24px; 
+    height: 24px;
+    margin-right: 10px;
+}
+
+.header {
+    background-color: #151961;
+    height: 70px;
+    padding: 20px;
+    margin-left: 250px; 
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+.header [.search] {
+    display: flex;
+    align-items: center;
+    border: 2px solid #333;
+    border-radius: 5px;
+    overflow: hidden;
+    justify-content: space-between;
+  }
+  
+ .header[.search input[type="text"]] {
+    padding: 10px;
+    border: none;
+    outline: none;
+    width: 200px;
+    
+ }
+    
+  .header[.search button] {
+    padding: 10px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    
+  }
+  
+  .header[.search button:hover] {
+    background-color: #white;
+  }
+  
+  #results {
+    margin-top: 20px;
+    font-size: 16px;
+    color: #333;
+    
+  }
+
+.account-button {
+    background-color: #4D4DA6;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    margin-right: 20px;
+    cursor: pointer;
+}
+
+.user-icon {
+    width: 40px;
+    height: 40px;
+    background-color: white;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+

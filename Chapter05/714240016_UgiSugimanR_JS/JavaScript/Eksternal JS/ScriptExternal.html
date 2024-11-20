@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Link JS eksternal</title>
+  </head>
+
+  <body>
+    <div class="text-center mt-4">
+        <H1 class="text-4xl font-bold">Nyoba bikin Java Script External</H1>
+        <p class="italic text-2xl m-2" id="demo">ini paragraf bukan dari file external</p>
+        <button class="bg-stone-800 text-white rounded p-2 m-2 ease-linear duration-300 transition hover:bg-stone-900" type="button" onclick="myFunction()">klik disini</button>
+        <button class="border-4 border-stone-800 p-1 rounded ease-linear duration-300 hover:bg-stone-800 hover:text-white" type="button" onclick="document.getElementById('demo').innerHTML = 'ini paragraf bukan dari file external'">balik lagi</button>
+    </div>
+    
+    <script src="script.js"></script>
+  </body>
+</html>

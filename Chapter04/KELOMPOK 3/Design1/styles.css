@@ -1,0 +1,193 @@
+body, h1, h2, h3, p, a {
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    background-color: #f4f7fb;
+    color: #333;
+    line-height: 1.6;
+    padding: 0;
+}
+
+/* background class hero */
+.hero {
+    background-size: cover;
+    background-position: center;
+    text-align: right;
+    padding: 100px 20px;
+    margin-top: 50px;
+}
+
+.hero h1 {
+    color: rgb(5, 0, 0);
+    font-size: 40px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+    text-align: left;
+    line-height: 1.2;
+}
+
+.hero p {
+    font-size: 37px;
+    line-height: 1.5;
+    color: rgb(5, 0, 0);
+    max-width: 800px;
+    margin-bottom: 30px;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+    text-align: left;
+}
+
+.hero .cta-btn {
+    padding: 12px 30px;
+    background-color: #ff9481;
+    color: white;
+    font-size: 18px;
+    border-radius: 20px;
+    text-decoration: none;
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease;
+    padding: 12px  30px;
+    margin: 10px;
+ }
+
+ .hero span {
+    color: rgb(0, 0, 0);
+    text-align: center;
+
+ }
+
+
+.hero .cta-btn:hover {
+    background-color: black;
+}
+
+.container {
+    max-width: 1200px;
+    padding: 20px;
+}
+
+/* kategori produk */
+.categories {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.category-card {
+    position: relative;
+    background-color: #fcbbb0;
+    border-radius: 15px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+    overflow: hidden;
+    transition: all 0.3s ease;
+    text-align: center;
+    width: 300px;
+}
+
+.category-card img {
+    width: 90%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 30px;
+    transition: transform 0.4s ease;
+}
+
+.category-card h3 {
+    margin-top: 20px;
+    font-size: 22px;
+    color: #333;
+    font-weight: 700;
+}
+
+.category-card p {
+    font-size: 15px;
+    color: #666;
+    margin: 10px 15px;
+    line-height: 1.5;
+}
+
+.category-card .price {
+    font-size: 20px;
+    color: #3A82F5;
+    font-weight: 700;
+    margin-top: 15px;
+    display: inline-block;
+}
+
+.cta-btn {
+    background-color:#37AFE1;
+    color: white;
+    padding: 12px 28px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-size: 16px;
+    letter-spacing: 1px;
+    display: inline-block;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.cta-btn:hover {
+    background-color: #3478d8;
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Hover untuk produk */
+.category-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.1);
+}
+
+.category-card:hover img {
+    transform: scale(1.05);
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: white;
+    padding: 40px 0;
+    text-align: center;
+    margin-top: 60px;
+}
+
+footer a {
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+    padding: 0 15px;
+}
+
+footer .social-icons a {
+    font-size: 20px;
+    margin: 0 15px;
+}
+
+footer .social-icons a:hover {
+    color: #3A82F5;
+}
+
+.img-box img {
+ width: 400px;
+ height: 520px;
+ margin-left: 2px;
+ margin-top: 5px;
+}       
+
+
+.hlmn {
+background-color: rgb(58, 180, 236) ;
+height: 100vh;
+display: flex;
+align-items: center;
+padding: 0 10%;
+}
+
+
+
+
+
+

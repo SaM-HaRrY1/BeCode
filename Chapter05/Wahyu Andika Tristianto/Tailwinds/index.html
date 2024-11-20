@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Mods Page</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-gray-900 text-white">
+    <!-- Slide Menu -->
+    <div id="mySidenav" class="slide-menu">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <div class="hover-banner">
+            <img src="Yu-Gi-Oh-Icon.jpg" alt="Strip Banner" class="w-full mb-4" style="max-width: 1980px; max-height: 1080px;">
+        </div>
+        <a href="index.html" onclick="returnToHome()">Home</a>
+        <a href="#">Mods</a>
+        <a href="javascript:void(0)" onclick="openProfile()">Profile</a>
+        <a href="javascript:void(0)" onclick="openAbout()">About</a>
+    </div>
+
+    <!-- Profile Hover Menu -->
+    <div id="profileHover" class="profile-hover">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeProfile()">&times;</a>
+        <div class="profile-content">
+            <img src="Centur-ion.png" alt="Profile Icon" class="h-10 mb-4">
+            <p>About Me.<br>Just Have Fun</p>
+        </div>
+    </div>
+
+    <!-- About Hover Menu -->
+    <div id="aboutHover" class="about-hover">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeAbout()">&times;</a>
+        <div class="about-content">
+            <img src="Yu-Gi-Oh-Icon.jpg" alt="About Banner" class="w-full mb-4" style="max-width: 1980px; max-height: 1080px;">
+            <p>This is My Mods Page. Enjoy!</p>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header class="bg-gray-800 text-white p-4">
+        <div class="container mx-auto flex justify-between items-center">
+            <div class="flex items-center">
+                <img src="strip-3.png" alt="Menu Icon" class="h-8 mr-4" onclick="openNav()">
+            </div>
+            <div class="flex-grow text-center">
+                <img src="nexus-mods.png" alt="Nexus Mods" class="h-10 inline-block">
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container mx-auto p-4">
+        <h1 class="text-3xl font-bold mb-4">Welcome to My Mods Page</h1>
+        <p class="mb-4">Explore and share mods for Yu-Gi-Oh Master Duel. Join our community of modders and gamers.</p>
+        
+        <!-- Mod List -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+            <div class="bg-gray-800 p-4 rounded shadow">
+                <img src="Centur-Ion Main.png" alt="Centur-Ion and Mics Alternative Arts" class="mod-img w-full h-auto mb-2" style="max-width: 1980px; max-height: 1080px;">
+                <h2 class="text-xl font-bold">Centur-Ion and Mics Alternative Arts</h2>
+                <p class="text-gray-400">Alternative Arts For Centur-ion and More</p>
+            </div>
+            <div class="bg-gray-800 p-4 rounded shadow">
+                <img src="Ragnaraika.png" alt="Ragnaraika Alternative Arts" class="mod-img w-full h-auto mb-2" style="max-width: 1980px; max-height: 1080px;">
+                <h2 class="text-xl font-bold">Ragnaraika Alternative Arts</h2>
+                <p class="text-gray-400">Alternative Arts For Centur-ion</p>
+            </div>
+            <div class="bg-gray-800 p-4 rounded shadow">
+                <img src="Tenpai.png" alt="Tenpai Dragon and more Alternative Arts" class="mod-img w-full h-auto mb-2" style="max-width: 1980px; max-height: 1080px;">
+                <h2 class="text-xl font-bold">Tenpai Dragon and more Alternative Arts</h2>
+                <p class="text-gray-400">Alternative Arts For Tenpai Dragon And More.</p>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white p-4 mt-4">
+        <div class="container mx-auto text-center">
+            <img src="Footers.png" alt="Footer Banner" class="w-full mb-4" style="max-width: 1400px; max-height: 400px;">
+            <p>&copy; 2024 My Mods Page. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

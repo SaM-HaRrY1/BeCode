@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>JavaScript</title>
+    <script>
+      function myFunction() {
+        document.getElementById("demo3").innerHTML =
+          "Yeee,Berhasil, ini adalah hasil dari memasukkan JavaScript pada Headd HTML Awas Jangan salah ya? iya pak.. hehe.";
+      }
+    </script>
+  </head>
+
+  <body>
+    <!-- PROMOTION -->
+    <div class="bg-amber-500 px-4 py-3 text-white">
+      <p class="text-center text-sm font-medium" id="demo">
+        Promo Hingga 60% berlaku untuk hari ini saja
+        <a href="#" class="inline-block underline"
+          >Check out this new course!</a
+        >
+      </p>
+    </div>
+    <!-- END PROMOTION  -->
+
+    <!-- NAVBAR -->
+    <header class="bg-white">
+      <div class="mx-auto max-w-screen-xl px-4 py-8 sm:px-6 sm:py-12 lg:px-8">
+        <div
+          class="flex flex-col items-start gap-4 md:flex-row md:items-center md:justify-between"
+        >
+          <div>
+            <h1 class="text-2xl font-bold text-gray-900 sm:text-3xl" id="demo1">
+              JavaScript
+            </h1>
+
+            <p class="mt-1.5 text-sm text-gray-500" id="demo3">
+              JavaScript nihh!!!
+            </p>
+          </div>
+
+          <div class="flex items-center gap-4">
+            <button
+              class="inline-flex items-center justify-center gap-1.5 rounded border border-gray-200 bg-white px-5 py-3 text-gray-900 transition hover:text-gray-700 focus:outline-none focus:ring"
+              type="button"
+              onclick="document.getElementById('demo1').style.fontSize='35px'"
+            >
+              <span class="text-sm font-medium"> Gedein Tulisan </span>
+            </button>
+
+            <button
+              class="inline-block rounded bg-amber-500 px-5 py-3 text-sm font-medium text-white transition hover:bg-amber-600 focus:outline-none focus:ring"
+              type="button"
+              onclick="document.getElementById('demo1').style.fontSize='30px'"
+            >
+              <span class="text-sm font-medium"> Kecilkan Tulisan </span>
+            </button>
+
+            <button
+              class="inline-flex items-center justify-center gap-1.5 rounded border border-gray-200 bg-white px-5 py-3 text-gray-900 transition hover:text-gray-700 focus:outline-none focus:ring"
+              type="button"
+              onclick="myFunction()"
+            >
+              <span class="text-sm font-medium"> Ini JS di Head </span>
+            </button>
+
+            <button
+              class="inline-block rounded bg-amber-500 px-5 py-3 text-sm font-medium text-white transition hover:bg-amber-600 focus:outline-none focus:ring"
+              type="button"
+              onclick="document.getElementById('demo3').innerHTML = 'JavaScript nihh!!!'"
+            >
+              <span class="text-sm font-medium"> Ini buat balikin JS Head </span>
+            </button>
+
+            <button
+              class="inline-flex items-center justify-center gap-1.5 rounded border border-gray-200 bg-white px-5 py-3 text-gray-900 transition hover:text-gray-700 focus:outline-none focus:ring"
+              type="button"
+              onclick="getLocation()"
+            >
+              <span class="text-sm font-medium"> Ini API </span>
+            </button>
+
+            <button
+              class="inline-block rounded bg-amber-500 px-5 py-3 text-sm font-medium text-white transition hover:bg-amber-600 focus:outline-none focus:ring"
+              type="button"
+              onclick="document.getElementById('demo4').innerHTML = 'Ini API'"
+            >
+              <span class="text-sm font-medium"> Ini buat balikin API </span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </header>
+    <!-- NAVBAR END -->
+
+    <!-- INI CONTENT -->
+     <div class=" flex m-5 p-2">
+        <div class="mr-52 pt-5">
+          <h1 class="text-2xl font-bold text-gray-900 sm:text-3xl" id="demo4">Ini API</h1>
+          <p>ini adalah website yang di styling menggunakan tailwind css dan juga sudah insert JS</p>
+          <button class="bg-amber-500 p-3 mt-2 rounded text-white transition hover:bg-amber-600"
+          type="button"
+          onclick="document.getElementById('IMG').src='https://images.unsplash.com/photo-1669023414180-4dcf35d943e1?q=80&w=1932&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'">
+            Ini Buat ganti gambar
+          </button>
+          <button class="bg-amber-500 p-3 mt-2 rounded text-white transition hover:bg-amber-600"
+          type="button"
+          onclick="document.getElementById('IMG').src='https://images.unsplash.com/photo-1632882765546-1ee75f53becb?q=80&w=1932&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'">
+            Ini Buat balikin gambar
+          </button>
+          <h1 class="mt-5 text-2xl italic">UNTUK ARITMETIKA KLIK CTRL+SHIFT+I</h1>
+        </div>
+        <img id="IMG" class="w-2/4 h-2/4 rounded-3xl" src="https://images.unsplash.com/photo-1632882765546-1ee75f53becb?q=80&w=1932&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="">
+      </div>
+    <!-- INI CONTENT -->
+
+    <!-- INI SCRIPT JS -->
+    <script>
+    document.getElementById("demo").innerHTML =
+      "Selamat Datang, Hallo World! saya belajar JavaScript";
+
+    // ini API
+    const x = document.getElementById("demo4");
+      function getLocation() {
+        try {
+          navigator.geolocation.getCurrentPosition(showPosition);
+        } catch {
+          x.innerHTML = err;
+        }
+        function showPosition(position) {
+          x.innerHTML =
+            "Latitude: " +
+            position.coords.latitude +
+            "<br>Longitude:" +
+            position.coords.longitude;
+        }
+      }
+      // ini API
+
+      // ini aritmetika
+      let a ;
+      let b ;
+      let penjumlahan = a + B;
+      console.log("Penjumlahan:", penjumlahan);
+
+      let pengurangan = a - b; 
+      console.log("Pengurangan:", pengurangan);
+
+      let perkalian = a * b; 
+      console.log("Perkalian:", perkalian);
+
+      let pembagian = a / b; 
+      console.log("Pembagian:", pembagian);
+
+      let modulus = a % b; 
+      console.log("Modulus:", modulus);
+      // ini aritmetika
+    </script>
+    <!-- INI SCRIPT JS END -->
+  </body>
+</html>
