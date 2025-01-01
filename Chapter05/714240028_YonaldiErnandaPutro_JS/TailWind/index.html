@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Membuat Website Dengan Tailwind</title>
+    <!-- Jangan lupa tambahkan koneksi HTML ke Tailwind -->
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<style>
+    body {
+        background-color: #1A1A19;
+    }
+</style>
+
+<body>
+    <!-- Navbar -->
+    <div class="container bg-center bg-cover px-28 py-5">
+        <nav class="flex items-center">
+            <img src="logo.png" alt="logonyaini" class="2-40- cursor-pointer" />
+            <ul class="flex-1 text-center">
+                <li class="list-none inline-block px-5">
+                    <a href="#" class="no-underline text-white px-2">Home</a>
+                </li>
+                <li class="list-none inline-block px-5">
+                    <a href="#" class="no-underline text-white px-2">About</a>
+                </li>
+                <li class="list-none inline-block px-5">
+                    <a href="#" class="no-underline text-white px-2">Features</a>
+                </li>
+                <li class="list-none inline-block px-5">
+                    <a href="#" class="no-underline text-white px-2">Contact</a>
+                </li>
+            </ul>
+            <img src="cart.png" alt="keranjang" class="2-8 cursor-pointer" />
+        </nav>
+    </div>
+
+    <!-- Body dan Navbar -->
+    <body>
+        <div class="flex items-center justify-between px-28 py-5 mt-10">
+            <div class="max-w-lg text-white">
+                <h1 class="text-6xl font-bold">Belajar Cepat</h1>
+                <h2 class="text-3xl font-bold mt-2">Pemrograman Website Tailwind <br/> 15 Menit Saja</h2>
+                <p class="mt-4">“Tailwind CSS is the only framework that I've seen scale on large teams. Its easy to
+                    customize, adapts to any design, and the build size is tiny.”</p>
+                <div class="mt-6"> 
+                    <button class="bg-yellow-500 text-black font-bold py-2 px-4 rounded">
+                        Mari Belajar</button> <button class="ml-4 text-blue-600">Download Modulnya<span class="text-lg inline-block rotate-90">&#10148</span></button> </div>
+            </div>
+            <div class="mt-10 ml-8"> <img src="programmer.png" alt="Illustration of a person coding" class="w-50">
+            </div>
+        </div>
+    </body>
+
+</html>

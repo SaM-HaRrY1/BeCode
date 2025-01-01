@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enhanced JavaScript Calculator and Q&A</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #121212;
+            color: #ffffff;
+            padding: 20px;
+        }
+        #calculator, #qaSection {
+            margin-bottom: 20px;
+        }
+        input, button {
+            background-color: #333333;
+            color: #ffffff;
+            border: none;
+            padding: 10px;
+            margin: 5px;
+        }
+        input::placeholder {
+            color: #bbbbbb;
+        }
+        button:hover {
+            background-color: #555555;
+        }
+        #imageChange {
+            width: 200px;
+            height: 200px;
+            border: 2px solid #ffffff;
+        }
+        .calc-input {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            background-color: #222222;
+            color: #ffffff;
+            border: 1px solid #444444;
+        }
+    </style>
+</head>
+<body>
+    <h1>Enhanced JavaScript Calculator and Q&A</h1>
+
+    <!-- Calculator Section -->
+    <div id="calculator">
+        <h2>Calculator</h2>
+        <input type="text" id="calcDisplay" class="calc-input" placeholder="0" disabled>
+        <div>
+            <button onclick="appendNumber('1')">1</button>
+            <button onclick="appendNumber('2')">2</button>
+            <button onclick="appendNumber('3')">3</button>
+            <button onclick="setOperation('+')">+</button>
+        </div>
+        <div>
+            <button onclick="appendNumber('4')">4</button>
+            <button onclick="appendNumber('5')">5</button>
+            <button onclick="appendNumber('6')">6</button>
+            <button onclick="setOperation('-')">-</button>
+        </div>
+        <div>
+            <button onclick="appendNumber('7')">7</button>
+            <button onclick="appendNumber('8')">8</button>
+            <button onclick="appendNumber('9')">9</button>
+            <button onclick="setOperation('*')">*</button>
+        </div>
+        <div>
+            <button onclick="appendNumber('0')">0</button>
+            <button onclick="appendNumber('.')">.</button>
+            <button onclick="clearDisplay()">C</button>
+            <button onclick="setOperation('/')">/</button>
+        </div>
+        <div>
+            <button onclick="calculateResult()" style="width: 100%;">=</button>
+        </div>
+        <p id="calcResult"></p>
+    </div>
+
+    <!-- Q&A Section -->
+    <div id="qaSection">
+        <h2>Question & Answer</h2>
+        <input type="text" id="question" placeholder="Ask a question">
+        <button onclick="answerQuestion()">Answer</button>
+        <p id="answer"></p>
+    </div>
+
+    <!-- Image Change -->
+    <div id="imageChangeSection">
+        <h2>Image Change</h2>
+        <img id="imageChange" src="Image 1.png" alt="Placeholder Image">
+        <button onclick="changeImage()">Change Image</button>
+    </div>
+
+    <!-- Paragraph Replacement -->
+    <div id="paragraphReplacement">
+        <h2>Paragraph Replacement</h2>
+        <p id="originalParagraph">Ini adalah paragraf asli.</p>
+        <button onclick="replaceParagraph()">Ganti Paragraf</button>
+    </div>
+
+    <script>
+        // Calculator Functions
+        let currentOperation = '';
+        let previousValue = '';
+        let currentValue = '';
+
+        function appendNumber(number) {
+            currentValue += number;
+            document.getElementById('calcDisplay').value = currentValue;
+        }
+
+        function setOperation(operation) {
+            if (currentValue === '') return;
+            if (previousValue !== '') {
+                calculateResult();
+            }
+            currentOperation = operation;
+            previousValue = currentValue;
+            currentValue = '';
+        }
+
+        function calculateResult() {
+            let result;
+            const prev = parseFloat(previousValue);
+            const current = parseFloat(currentValue);
+            if (isNaN(prev) || isNaN(current)) return;
+            switch (currentOperation) {
+                case '+':
+                    result = prev + current;
+                    break;
+                case '-':
+                    result = prev - current;
+                    break;
+                case '*':
+                    result = prev * current;
+                    break;
+                case '/':
+                    result = prev / current;
+                    break;
+                default:
+                    return;
+            }
+            currentValue = result;
+            currentOperation = undefined;
+            previousValue = '';
+            document.getElementById('calcDisplay').value = result;
+        }
+
+        function clearDisplay() {
+            currentValue = '';
+            previousValue = '';
+            currentOperation = undefined;
+            document.getElementById('calcDisplay').value = '';
+        }
+
+        // Question & Answer Function
+        function answerQuestion() {
+            var question = document.getElementById('question').value;
+            var answer;
+            switch (question.toLowerCase()) {
+                case 'what is the capital of indonesia?':
+                    answer = 'The capital of Indonesia is Jakarta.';
+                    break;
+                case 'what is 2 + 2?':
+                    answer = '2 + 2 equals 4.';
+                    break;
+                default:
+                    answer = 'I don\'t know the answer to that question.';
+            }
+            document.getElementById('answer').innerText = 'Answer: ' + answer;
+        }
+
+        // Image Change Function
+        function changeImage() {
+            var image = document.getElementById('imageChange');
+            image.src = "Image 2.png";
+        }
+
+        // Paragraph Replacement Function
+        function replaceParagraph() {
+            var newParagraph = "Ini adalah paragraf baru yang menggantikan paragraf asli.";
+            document.getElementById('originalParagraph').innerText = newParagraph;
+        }
+    </script>
+</body>
+</html>

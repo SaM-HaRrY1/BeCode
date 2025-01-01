@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Membuat Website dengan Tailwind</title>
+    <!-- Jangan lupa tambahkan koneksi HTML ke Tailwind -->
+    <link rel="stylesheet" href="styles.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+    <!-- Membuat class container dan ukurannya disini -->
+    <!-- Menambahkan background images -->
+    <!-- Menambah posisi gambar agar ketengah -->
+    <!-- Mengatur posisi ukurannya -->
+<div class="min-h-screen bg-[url('image.haikal/image.png')] bg-center bg-cover px-28 py-5 relative">
+    <nav class="flex items-center">
+        <img src="image.haikal/logo.png" alt="logonyaini" class="w-40 cursor-pointer" />
+        <ul class="flex-1 text-center">
+            <li class="list-none inline-block px-5">
+                <a href="#" class="no-underline text-white px-2">Home</a>
+            </li>
+            <li class="list-none inline-block px-5">
+                <a href="#" class="no-underline text-white px-2">About</a>
+            </li>
+            <li class="list-none inline-block px-5">
+                <a href="#" class="no-underline text-white px-2">Features</a>
+            </li>
+            <li class="list-none inline-block px-5">
+                <a href="#" class="no-underline text-white px-2">Contact</a>
+            </li>
+        </ul>
+        <img src="image.haikal/cart.png" alt="keranjang" class="w-8 cursor-pointer" />
+    </nav>
+    <div class="text-white mt-48 xl:w-1/2">
+        <h1 class="text-6xl font-semibold leading-normal">
+            Belajar Ngoding Cepat<br />
+            <span class="font-light">Tailwindcss 20 Menit Saja</span>
+        </h1>
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam recusandae deleniti, <br>necessitatibus quisquam accusantium voluptas maxime, incidunt voluptatibus architecto <br>excepturi placeat numquam. Consequuntur sed assumenda eum. Culpa, esse minima,<br> eum dicta ea non officia dignissimos neque fugiat quaerat voluptatibus autem!
+        </p>
+        <div class="mt-10">
+            <a href="#" class="bg-yellow-300 rounded-3xl py-3 px-8
+            font-medium inline-block mr-4
+            hover:bg-transparent hover:border-yellow-300
+            hover:text-white duration-300 hover:border
+            border border-transparent"
+            >Mari Belajar</a>
+            <a href="#">Download Modulnya <span class="text-lg inline-block rotate-90">&#10148</span></a>
+        </div>
+    </div>
+    <img src="image.haikal/programmer.png" alt="" class="w-full xl:w-1/2 xl:absolute right-0 top-32">
+</div>
+
+<!-- Aritmatika -->
+<section id="aritmatika" class="section bg-yellow-600 rounded-lg shadow-md p-6">
+    <h2 class="text-xl font-semibold mb-4 text-blue-400 flex items-center">
+        <i class="fas fa-calculator mr-2"></i>Operasi Aritmatika
+    </h2>
+    <div class="grid md:grid-cols-2 gap-4">
+        <div>
+            <div class="flex items-center space-x-4 mb-2">
+                <label class="w-1/3 text-white">Angka Pertama:</label>
+                <input type="number" id="num1" 
+                    class="flex-grow p-2 border border-gray-700 bg-gray-700 text-white rounded" 
+                    placeholder="Masukkan angka">
+            </div>
+            <div class="flex items-center space-x-4 mb-2">
+                <label class="w-1/3 text-white">Angka Kedua:</label>
+                <input type="number" id="num2" 
+                    class="flex-grow p-2 border border-gray-700 bg-gray-700 text-white rounded" 
+                    placeholder="Masukkan angka">
+            </div>
+            <button onclick="hitungOperasi()" 
+                class="w-full bg-blue-600 text-white p-2 rounded hover:bg-blue-700 transition">
+                Hitung Operasi
+            </button>
+        </div>
+        <div>
+            <p id="hasilOperasi" class="bg-gray-700 p-4 rounded text-white">
+                Hasil operasi akan ditampilkan di sini
+            </p>
+        </div>
+    </div>
+</section>
+
+<!-- Syntax -->
+<section id="syntax" class="section bg-green-700 rounded-lg shadow-md p-6">
+    <h2 class="text-xl font-semibold mb-4 text-green-400 flex items-center">
+        <i class="fas fa-code mr-2" aria-hidden="true"></i>
+        <span>Contoh Syntax</span>
+    </h2>
+    <div class="grid md:grid-cols-2 gap-4">
+        <div>
+            <div class="flex items-center space-x-4 mb-2">
+                <label for="namaInput" class="w-1/3 text-white">Masukkan Nama:</label>
+                <input 
+                    type="text" 
+                    id="namaInput" 
+                    class="flex-grow p-2 border border-gray-600 bg-gray-800 text-white rounded focus:outline-none focus:ring-2 focus:ring-green-500" 
+                    placeholder="Nama Anda">
+            </div>
+            <button 
+                onclick="cekSyntax()" 
+                class="w-full bg-green-600 text-white p-2 rounded hover:bg-green-700 focus:ring-2 focus:ring-green-400 transition">
+                Cek Syntax
+            </button>
+        </div>
+        <div>
+            <p id="hasilSyntax" class="bg-purple-600 p-4 rounded text-white">
+                Hasil syntax akan ditampilkan di sini
+            </p>
+        </div>
+    </div>
+</section>
+
+<script>
+    function cekSyntax() {
+        const nama = document.getElementById("namaInput").value;
+        const hasil = document.getElementById("hasilSyntax");
+        if (nama.trim()) {
+            hasil.textContent = `Halo, ${nama}! Syntax Anda benar!`;
+        } else {
+            hasil.textContent = "Silakan masukkan nama terlebih dahulu.";
+        }
+    }
+</script>
+
+
+<!-- Statement -->
+<section id="statement" class="section bg-red-600 rounded-lg shadow-md p-6">
+    <h2 class="text-xl font-semibold mb-4 text-yellow-400 flex items-center">
+        <i class="fas fa-comment-dots mr-2"></i>Contoh Statement
+    </h2>
+    <div class="grid md:grid-cols-2 gap-4">
+        <div>
+            <div class="flex items-center space-x-4 mb-2">
+                <label class="w-1/3 text-white">Masukkan Umur:</label>
+                <input type="number" id="umurInput" 
+                    class="flex-grow p-2 border border-gray-700 bg-gray-700 text-white rounded" 
+                    placeholder="Umur Anda">
+            </div>
+            <button onclick="cekStatement()" 
+                class="w-full bg-yellow-600 text-white p-2 rounded hover:bg-yellow-700 transition">
+                Cek Statement
+            </button>
+        </div>
+        <div>
+            <p id="hasilStatement" class="bg-blue-600 p-4 rounded text-white">
+                Hasil statement akan ditampilkan di sini
+            </p>
+        </div>
+    </div>
+</section>
+
+<!-- Galeri Gambar -->
+<section id="galeri" class="section bg-yellow-800 rounded-lg shadow-md p-6">
+    <h2 class="text-xl font-semibold mb-4 text-purple-400 flex items-center">
+        <i class="fas fa-images mr-2"></i>Galeri Gambar
+    </h2>
+    <img id="gambarContoh" 
+         img src="image.haikal/" 
+         alt="Gambar Acak"  class="w-full h-96 object-cover rounded-lg shadow-lg mb-4 border-4 border-gray-700">
+    <button onclick="gantiGambar()" 
+        class="w-full bg-purple-600 text-white p-2 rounded hover:bg-purple-700 transition">
+        Ganti Gambar Acak
+    </button>
+</section>
+
+<!-- Paragraf Dinamis -->
+<section id="paragraf" class="section bg-green-800 rounded-lg shadow-md p-6">
+    <h2 class="text-xl font-semibold mb-4 text-red-400 flex items-center">
+        <i class="fas fa-paragraph mr-2"></i>Paragraf Dinamis
+    </h2>
+    <p id="paragrafContoh" class="mb-4 text-gray-200 leading-relaxed bg-gray-700 p-4 rounded">
+        Teknologi informasi telah mengubah cara kita berinteraksi dengan dunia. 
+        Internet membuka pintu komunikasi global, memungkinkan pertukaran informasi 
+        yang cepat dan tak terbatas. Dari media sosial hingga platform e-learning, 
+        teknologi digital telah merevolusi berbagai aspek kehidupan manusia, menciptakan konektivitas yang sebelumnya tidak terbayangkan.
+    </p>
+    <button onclick="gantiParagraf()" 
+        class="w-full bg-red-600 text-white p-2 rounded hover:bg-red-700 transition">
+        Ganti Paragraf
+    </button>
+</section>
+</div>
+
+<script>
+// Fungsi Operasi Aritmatika
+function hitungOperasi() {
+    const num1 = parseFloat(document.getElementById('num1').value) || 0;
+    const num2 = parseFloat(document.getElementById('num2').value) || 0;
+    
+    const hasil = {
+        Penjumlahan: num1 + num2,
+        Pengurangan: num1 - num2,
+        Perkalian: num1 * num2,
+        Pembagian: num2 !== 0 ? num1 / num2 : 'Tidak bisa dibagi nol'
+    };
+
+    document.getElementById('hasilOperasi').innerHTML = 
+        `Hasil Operasi:<br>
+        • Penjumlahan: ${hasil.Penjumlahan}<br>
+        • Pengurangan: ${hasil.Pengurangan}<br>
+        • Perkalian: ${hasil.Perkalian}<br>
+        • Pembagian: ${hasil.Pembagian}`;
+}
+
+// Contoh Syntax
+function cekSyntax() {
+    const nama = document.getElementById('namaInput').value.trim();
+    
+    if (nama === '') {
+        document.getElementById('hasilSyntax').textContent = 'Nama tidak boleh kosong!';
+    } else if (nama.length < 3) {
+        document.getElementById('hasilSyntax').textContent = 'Nama terlalu pendek!';
+    } else {
+        const nama = "ContohNama"; // Pastikan nama memiliki nilai
+const hasilSyntax = `Nama: ${nama}, Panjang: ${nama.length} karakter, Huruf Kapital: ${nama.toUpperCase()}`;
+document.getElementById('hasilSyntax').textContent = hasilSyntax;
+
+    }
+}
+
+// Contoh Statement
+function cekStatement() {
+    const umur = parseInt(document.getElementById('umurInput').value);
+    let hasil = '';
+
+    switch (true) {
+        case isNaN(umur):
+            hasil = 'Silakan masukkan umur yang valid';
+            break;
+        case umur < 12:
+            hasil = 'Anak-anak';
+            break;
+        case umur < 18:
+            hasil = 'Remaja';
+            break;
+        case umur < 35:
+            hasil = 'Dewasa Muda';
+            break;
+        case umur < 60:
+            hasil = 'Dewasa';
+            break;
+        default:
+            hasil = 'Lansia';
+    }
+
+    document.getElementById('hasilStatement').textContent = hasil;
+}
+
+// Fungsi Ganti Gambar
+const gambar = [
+    'https://source.unsplash.com/random/800x600?sig=1',
+    'https://source.unsplash.com/random/800x600?sig=2',
+    'https://source.unsplash.com/random/800x600?sig=3'
+];
+let gambarIndex = 0;
+
+function gantiGambar() {
+    gambarIndex = (gambarIndex + 1) % gambar.length;
+    document.getElementById('gambarContoh').src = gambar[gambarIndex];
+}
+
+// Fungsi Ganti Paragraf
+const paragraf = [
+    'Teknologi informasi telah mengubah cara kita berinteraksi dengan dunia. Internet membuka pintu komunikasi global, memungkinkan pertukaran informasi yang cepat dan tak terb atas. Dari media sosial hingga platform e-learning, teknologi digital telah merevolusi berbagai aspek kehidupan manusia, menciptakan konektivitas yang sebelumnya tidak terbayangkan.',
+    'Perkembangan teknologi juga membawa tantangan baru, seperti masalah privasi dan keamanan data. Dalam era digital ini, penting bagi individu dan organisasi untuk memahami risiko yang terkait dengan penggunaan teknologi dan mengambil langkah-langkah untuk melindungi informasi mereka.',
+    'Di sisi lain, teknologi juga memberikan peluang baru dalam bidang pendidikan, kesehatan, dan bisnis. Dengan memanfaatkan teknologi, kita dapat meningkatkan efisiensi, mengakses informasi dengan lebih mudah, dan menciptakan solusi inovatif untuk berbagai masalah yang dihadapi masyarakat.'
+];
+let paragrafIndex = 0;
+
+function gantiParagraf() {
+    paragrafIndex = (paragrafIndex + 1) % paragraf.length;
+    document.getElementById('paragrafContoh').textContent = paragraf[paragrafIndex];
+}
+</script>
+</body>
+</html>
+</body>
+</html>

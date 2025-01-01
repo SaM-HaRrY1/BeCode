@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>lokasi</title>
+</head>
+<body>
+    <button type="button" onclick="getLocation()">klik disini</button>
+
+    <p id="demo"></p>
+    <script>
+       const x = document.getElementById("demo");
+        function getLocation(){
+            try{
+                navigator.geolocation.getCurrentPosition(showPosition);
+            }catch{
+                x.innerHTML = err;
+            }
+        }
+        function showPosition(position){
+                x.innerHTML = "Latitude :"+ position.coords.latitude + 
+                "<br> Longitude :" + position.coords.longitude;
+            }
+    </script>
+</body>
+</html>
