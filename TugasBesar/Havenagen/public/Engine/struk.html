@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="resiContainer" class="mt-4" style="display: none;">
+        <h3>Resi Pembayaran</h3>
+        <p id="resiDetail"></p>
+    </div>
+    </div>
+</body>
+
+</html>
+
+<script>
+
+    function generateResi() {
+        if (keranjang.length === 0) {
+            alert("Keranjang Anda kosong. Tidak ada transaksi yang diproses");
+            return;
+        }
+
+        const transactionId = TRX${ Date.now()
+    };
+    let totalPembayaran = 0;
+    const detailProduk = keranjang.map((produk) => {
+        totalPembayaran += produk.harga * produk.jumlah;
+        return ${ produk.nama } (${ produk.jumlah } x Rp$({ produk.harga.toLocaleString() });
+    }).join("<br>");
+
+    document.getElementById("resiDetail").innerHTML = `
+    <strong>ID Transakasi:</strong> ${transactionId}<br>
+    <strong>Produk:</strong><br>${detailProduk}<br>
+    <strong>Total Pembayaran:</strong> Rp${totalPembayaran.toLocaleString()}
+    `;
+
+    keranjang = [];
+    localStorage.removeItem("keranjang");
+    renderKeranjang();
+
+    document.getElementById("resiContainer").style.display = "block";
+    }
+
+    function redirectBeli() {
+        generateResi();
+    }

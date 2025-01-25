@@ -1,0 +1,229 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,700,900');
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: poppins;
+    line-height: 1.6;
+    color: #333;
+}
+
+.container {
+    padding: 20px;
+}
+
+.logo {
+    width: 100px;
+    height: auto;
+    margin-right: 35px;
+}
+
+.carousel {
+    max-width: 75%;
+    margin: 0 auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    height: 400px;
+}
+
+.carousel img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+    width: 40px;
+    height: 40px;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 50%;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.carousel-control-next-icon,
+.carousel-control-prev-icon {
+    width: 20px;
+    height: 20px;
+}
+
+.carousel-indicators {
+    bottom: 10px;
+}
+
+.carousel-indicators button {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    margin: 0 5px;
+}
+
+.card-img-g {
+    width: 200px;
+    height: 150px;
+}
+.card-section {
+    margin-top: 15rem;
+    height: 1200px;
+}
+
+.card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    margin: 10px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.card-img-top {
+    object-fit: cover;
+}
+
+.card-body {
+    text-align: center;
+    padding: 15px;
+}
+
+.navbar {
+    box-shadow: 5px 5px 5px rgba(231, 229, 229, 0.8);
+    position: sticky;
+    top: 0;
+    width: 100%;
+    background-color: white !important;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+    z-index: 1000;
+}
+
+.nav-item {
+    font-weight: 500;
+    font-size: 18px;
+    font-family: poppins;
+    margin: 0 10px;
+    padding: 5px 10px;
+    transition: background-color 0.3s ease;
+}
+
+.nav-item:hover {
+    /* background-color: #508D4E; */
+    color: #685752;
+    border-radius: 5px;
+}
+
+.nav-item,
+.lgn {
+    color: #685752;
+}
+
+.nav-link.active {
+    color: #685752;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+footer {
+    height: auto;
+    padding: 40px 0;
+    background-color: #343a40;
+    color: white;
+}
+
+footer h6 {
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+
+footer img {
+    margin: 10px 0;
+    transition: opacity 0.3s ease;
+}
+
+footer img:hover {
+    opacity: 0.8;
+}
+
+footer,
+.container {
+    margin-top: 5rem;
+}
+
+#tengah {
+    max-width: 30%;
+}
+
+@media (max-width: 768px) {
+    .nav-item {
+        font-size: 16px;
+        padding: 5px 8px;
+    }
+
+    .navbar-toggler-icon {
+        font-size: 20px;
+    }
+
+    .navbar-collapse {
+        background-color: #4caf50;
+    }
+
+    .navbar-nav {
+        text-align: center;
+    }
+
+    .carousel {
+        height: 200x;
+        max-width: 90%;
+        margin: 10px auto;
+        padding: 5px;
+    }
+
+    .carousel-control-prev,
+    .carousel-control-next {
+        width: 25px;
+        height: 25px;
+        background-color: rgba(0, 0, 0, 0.3);
+    }
+
+    .carousel-control-prev-icon,
+    .carousel-control-next-icon {
+        width: 20px;
+        height: 20px;
+    }
+
+    .carousel-indicators {
+        bottom: 5px;
+    }
+
+    .carousel-indicators button {
+        width: 8px;
+        height: 8px;
+        margin: 0 3px;
+    }
+
+    .card-section {
+        margin-top: 10rem;
+        height: auto;
+    }
+
+    .card-img-top {
+        height: 150px;
+    }
+
+    footer {
+        text-align: center;
+    }
+
+    footer .col-md-4 {
+        margin-bottom: 20px;
+    }
+}

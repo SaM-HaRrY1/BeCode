@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Menu</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="Engine/styleme.css">
+  <link rel="stylesheet" href="<?= base_url('keranjang'); ?>">
+  <link rel="icon" href="Img/Logo2.png" type="image/x-icon"/>
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="<?= base_url('landing'); ?>"><img class="logo" src="../Img/Logo2.png" alt=""></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="<?= base_url('landing'); ?>">Beranda</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="<?= base_url('menu'); ?>">Menu</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="<?= base_url('hubungikami'); ?>">Hubungi Kami</a>
+          </li>
+        </ul>
+      </div>
+      <div class="text-right">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="<?= base_url('keranjang'); ?>">
+              <button type="button" class="btn btn-light">
+                Keranjang
+                <i class="fa-solid fa-cart-shopping"></i>
+                <span id="cart-count" class="badge bg-danger">0</span>
+              </button>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="<?= base_url('login'); ?>">Login/SignUp</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <br>
+  <h1 style="text-align: center;">MENU</h1>
+
+  <section>
+    <div class="container text-center">
+      <div class="row row-cols-2 row-cols-lg-4 g-2 g-lg-3">
+      <?php foreach ($isimenu as $m) : ?>
+        <div class="col">
+          <span class="border-bottom"><img src="Img/<?= $m['foto_menu']; ?>" alt="" class="img-fluid"></span>
+          <br><br>
+          <h4><?= $m['nama_menu']; ?></h4>
+          <h5>Rp:<?= $m['harga']; ?></h5>
+          <button class="Tombol" onclick="tambahKeKeranjang('<?= $m['id_menu']; ?>', '<?= $m['nama_menu']; ?>', '<?= $m['harga']; ?>', 'Img/<?= $m['foto_menu']; ?>')">Tambah Keranjang</button>
+        </div>
+        <?php endforeach; ?>
+      </div>
+    </div>
+  </section>
+
+  <br> <br> <br> <br>
+  <footer class="bg-dark text-light py-4">
+    <div class="container">
+      <div class="row">
+        <!-- Logo Section -->
+        <div class="col-md-4 mb-3" style="text-align: left;"><br><br>
+          <img src="../Img/Logo.jpeg" alt="" style="width: 230px; margin-bottom: 50px;">
+          <p class="mt-2">© 2025 All Rights Reserved</p>
+        </div>
+
+        <!-- Lokasi -->
+        <div class="col-md-4 mb-3" style="text-align: left;">
+          <h6>Customer Center</h6>
+          <p>Havenagen</p>
+          Jl. Terusan No.52, Cimahi, <br>
+          Kec. Cimahi Tengah, Kota Cimahi, Jawa Barat 40525</p>
+          <p><i class="fa-brands fa fa-whatsapp"> </i> 0812-3456-7890</p>
+        </div>
+
+        <div class="col-md-4 mb-3" style="text-align: left;">
+          <h6>Available at</h6>
+          <img src="../Img/gofood-logo.png" alt="" style="width: 90px;"><br>
+          <img src="../Img/grab-logo.png" alt="" style="width: 90px;"><br>
+          <img src="../Img/shp-logo.png" alt="" style="width: 90px;"><br><br>
+        </div>
+      </div>
+    </div>
+    </div>
+  </footer>
+
+  <script>
+    // Fungsi untuk memperbarui jumlah item di keranjang
+    function updateCartCount() {
+      const keranjang = JSON.parse(localStorage.getItem("keranjang")) || [];
+      const totalItems = keranjang.reduce((sum, item) => sum + (item.jumlah || 1), 0); // Total dari semua jumlah produk
+      document.getElementById("cart-count").textContent = totalItems;
+    }
+
+    // Panggil fungsi ini setiap kali halaman dimuat
+    window.onload = updateCartCount;
+
+    // Fungsi untuk menambah produk ke keranjang
+    function tambahKeKeranjang(id_menu, nama, harga, gambar) {
+      console.log('Gambar:', gambar);
+      let keranjang = JSON.parse(localStorage.getItem("keranjang")) || [];
+
+      // Cari produk dengan nama yang sama
+      const produkIndex = keranjang.findIndex((item) => item.id_menu === id_menu);
+
+      if (produkIndex > -1) {
+        // Jika produk sudah ada, tambahkan jumlahnya
+        if (!keranjang[produkIndex].jumlah) keranjang[produkIndex].jumlah = 1; // Pastikan ada properti jumlah
+        keranjang[produkIndex].jumlah += 1;
+      } else {
+        // Jika produk belum ada, tambahkan sebagai produk baru
+        keranjang.push({
+        id_menu: id_menu,
+          nama: nama.trim(),
+          harga: parseFloat(harga),
+          gambar: gambar,
+          jumlah: 1, // Inisialisasi jumlah produk
+        });
+      }
+
+      // Simpan kembali ke localStorage
+      localStorage.setItem("keranjang", JSON.stringify(keranjang));
+
+      // Perbarui tampilan jumlah item di keranjang
+      updateCartCount();
+    }
+
+  </script>
+</body>
+
+</html>

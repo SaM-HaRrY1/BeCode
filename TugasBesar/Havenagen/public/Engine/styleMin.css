@@ -1,0 +1,98 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,700,900');
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: poppins;
+    line-height: 1.6;
+    color: #333;
+}
+
+.logo {
+    width: 100px;
+    height: auto;
+    margin-right: 35px;
+}
+
+.top {
+    margin-top: 3rem;
+}
+
+.top,
+a {
+    text-decoration: none;
+    color: black;
+}
+
+span {
+    font-weight: 600;
+}
+
+.container,
+img {
+    border-radius: 9px;
+}
+
+.navbar {
+    box-shadow: 2px 2px 2px rgba(243, 241, 241, 0.8);
+    position: sticky;
+    top: 0;
+    width: 100%;
+    background-color: white !important;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+    z-index: 1000;
+}
+
+.nav-item {
+    font-weight: 500;
+    font-size: 18px;
+    font-family: poppins;
+    margin: 0 10px;
+    padding: 5px 10px;
+    transition: background-color 0.3s ease;
+}
+
+.nav-item:hover {
+    /* background-color: #508D4E; */
+    color: #685752;
+    border-radius: 5px;
+}
+
+.nav-item,
+.lgn {
+    color: #685752;
+}
+
+.nav-link.active {
+    color: #685752;
+}
+
+footer {
+    height: auto;
+    padding: 40px 0;
+    background-color: #343a40;
+    color: white;
+}
+
+footer h6 {
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+
+footer img {
+    margin: 10px 0;
+    transition: opacity 0.3s ease;
+}
+
+footer img:hover {
+    opacity: 0.8;
+}
+
+footer,
+.container {
+    margin-top: 5rem;
+}

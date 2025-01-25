@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,700,900');
+
+body {
+    font-family: poppins;
+}
+
+.logo {
+    width: 100px;
+    height: auto;
+    margin-right: 35px;
+}
+
+/* Navbar */
+.navbar {
+    box-shadow: 2px 2px 2px rgba(243, 241, 241, 0.8);
+    position: sticky;
+    top: 0;
+    width: 100%;
+    background-color: white !important;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+    z-index: 1000;
+}
+
+.nav-item {
+    font-weight: 500;
+    font-size: 18px;
+    font-family: poppins;
+    margin: 0 10px;
+    padding: 5px 10px;
+    transition: background-color 0.3s ease;
+}
+
+.nav-item:hover {
+    /* background-color: #508D4E; */
+    color: #685752;
+    border-radius: 5px;
+}
+
+.nav-item,
+.lgn {
+    color: #685752;
+}
+
+.nav-link.active {
+    color: #685752;
+}
+
+span {
+    font-weight: 600;
+}
+
+.container,
+img {
+    border-radius: 9px;
+}
+
+.Tombol {
+    background-color: #4CAF50;
+    /* Warna hijau */
+    color: white;
+    /* Warna teks */
+    border: none;
+    /* Menghapus border */
+    border-radius: 5px;
+    /* Membuat sudut membulat */
+    padding: 10px 20px;
+    /* Jarak dalam tombol */
+    font-size: 16px;
+    /* Ukuran font */
+    cursor: pointer;
+    /* Menampilkan kursor pointer */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    /* Menambahkan bayangan */
+    transition: all 0.3s ease;
+    /* Efek transisi */
+}
+
+.Tombol:hover {
+    background-color: #45a049;
+    /* Warna hijau lebih gelap saat hover */
+    transform: scale(1.05);
+    /* Efek memperbesar */
+}
+
+.Tombol:active {
+    background-color: #3e8e41;
+    /* Warna saat diklik */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    /* Bayangan lebih kecil */
+    transform: scale(0.95);
+    /* Efek mengecil */
+}
+
+/* Footer */
+footer {
+    height: auto;
+    padding: 40px 0;
+    background-color: #343a40;
+    color: white;
+}
+
+footer h6 {
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+
+footer img {
+    margin: 10px 0;
+    transition: opacity 0.3s ease;
+}
+
+footer img:hover {
+    opacity: 0.8;
+}
+
+footer,
+.container {
+    margin-top: 5rem;
+}
