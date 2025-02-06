@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API Location JS</title>
+</head>
+<body>
+    <h2>JavaScript Menggunakan Geolocation</h2>
+    <p id="demo"></p>
+    <button onclick="getLocation()">Klik Disini</button>
+    <script>
+        const x = document.getElementById("demo");
+        function getLocation() {
+            if (navigator.geolocation) {
+                navigator.geolocation.getCurrentPosition(showPosition, showError);
+            } else {
+                x.innerHTML = "Geolocation tidak didukung oleh browser ini.";
+            }
+        }
+        function showPosition(position) {
+            x.innerHTML = "Latitude: " + position.coords.latitude + 
+            "<br>Longitude: " + position.coords.longitude;
+        }
+        function showError(error) {
+            switch(error.code) {
+                case error.PERMISSION_DENIED:
+                    x.innerHTML = "Pengguna menolak permintaan Geolocation.";
+                    break;
+                case error.POSITION_UNAVAILABLE:
+                    x.innerHTML = "Informasi lokasi tidak tersedia.";
+                    break;
+                case error.TIMEOUT:
+                    x.innerHTML = "Permintaan untuk mendapatkan lokasi pengguna habis waktu.";
+                    break;
+                case error.UNKNOWN_ERROR:
+                    x.innerHTML = "Terjadi kesalahan yang tidak diketahui.";
+                    break;
+            }
+        }
+    </script>
+</body>
+</html>

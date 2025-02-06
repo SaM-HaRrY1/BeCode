@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contoh Css Position Box Shadow dan Animation</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-image: url("background.jpg");
+            background-size: cover;
+            font-family: arial, sans-serif;
+        }
+
+        .container {
+            position:relative;
+            width: 300px;
+            height: 200px;
+            background-color: #3498db;
+            margin: 100px auto;
+            box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+        }
+
+        .box {
+            position:absolute;
+            width: 100px;
+            height: 100px;
+            background-color: #e74c3c;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            transition: transform 0.5s;
+        }
+
+        .box:hover {
+            transform: translate(-50%, -50%) rotate(45deg);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box"></div>
+    </div>
+</body>
+</html>
